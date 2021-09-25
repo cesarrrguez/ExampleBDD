@@ -13,8 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Features\" />
-    <Folder Include="Steps\" />
+    <ProjectReference Include="..\ExampleBDD\ExampleBDD.csproj" />
   </ItemGroup>
 
 </Project>
