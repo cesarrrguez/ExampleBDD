@@ -12,5 +12,16 @@
             Health = 1000;
             Level = 1;
         }
+
+        public void Attack(Character target, int attackDamage)
+        {
+            target.ReceiveAttack(attackDamage);
+        }
+
+        private void ReceiveAttack(int attackDamage)
+        {
+            Health -= attackDamage;
+            if (Health < 0) Health = 0;
+        }
     }
 }
