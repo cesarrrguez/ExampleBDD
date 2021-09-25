@@ -27,6 +27,14 @@ namespace ExampleBDD.Test.Steps
             enemy.Attack(character, attackDamage);
         }
 
+        [When(@"is healed with (.*)")]
+        public void WhenIsHealedWith(int healedValue)
+        {
+            Character otherCharacter = new Character();
+            otherCharacter.Heal(character, healedValue);
+        }
+
+
         [Then(@"the health starting at (.*)")]
         public void ThenTheHealthStartingAt(int health)
         {

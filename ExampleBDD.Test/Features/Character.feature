@@ -16,3 +16,13 @@ Scenario: Health can not be less than 0
 	When is attacked with 900 of damage
 	Then the health is 0
 	And is dead
+
+Scenario: Dead characters cannot be healed
+	Given A character with 0 of health
+	When is healed with 100
+	Then the health is 0
+
+Scenario: Healing cannot raise health above 1000
+	Given A character with 900 of health
+	When is healed with 150
+	Then the health is 1000
