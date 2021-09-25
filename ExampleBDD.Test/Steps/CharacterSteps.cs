@@ -24,16 +24,15 @@ namespace ExampleBDD.Test.Steps
         public void WhenIsAttackedWithOfDamage(int attackDamage)
         {
             Character enemy = new Character();
-            Character.Attack(_character, attackDamage);
+            enemy.Attack(_character, attackDamage);
         }
 
         [When(@"is healed with (.*)")]
         public void WhenIsHealedWith(int healedValue)
         {
             Character otherCharacter = new Character();
-            Character.Heal(_character, healedValue);
+            otherCharacter.Heal(_character, healedValue);
         }
-
 
         [Then(@"the health starting at (.*)")]
         public void ThenTheHealthStartingAt(int health)

@@ -13,12 +13,12 @@
             Level = 1;
         }
 
-        public static void Attack(Character target, int attackDamage)
+        public void Attack(Character target, int attackDamage)
         {
             target.ReceiveAttack(attackDamage);
         }
 
-        public static void Heal(Character target, int healedValue)
+        public void Heal(Character target, int healedValue)
         {
             target.ReceiveHeal(healedValue);
         }
